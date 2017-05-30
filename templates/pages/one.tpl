@@ -1,0 +1,1 @@
+{{define "content"}}Content for page one{{end}}
