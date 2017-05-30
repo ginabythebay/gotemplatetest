@@ -38,7 +38,7 @@ func loadTemplates(templatesDir string) (map[string]*template.Template, error) {
 
 	// Generate our templates map from our layouts/ and includes/ directories
 	for _, p := range includes {
-		files := []string{p, base}
+		files := []string{base, p}
 		templates[filepath.Base(p)] = template.Must(template.ParseFiles(files...))
 	}
 	return templates, nil
